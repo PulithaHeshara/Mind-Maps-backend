@@ -1,0 +1,19 @@
+# Python virtual environment
+.venv
+venv
+
+# Django files
+__pycache__/
+*.pyc
+db.sqlite3
+/media/
+/static/
+
+# Environment variables
+.env
+
+# Redis database file
+dump.rdb
+
+# Node.js dependencies
+node_modules/
