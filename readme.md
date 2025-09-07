@@ -8,21 +8,23 @@ A collaborative **mind mapping web app** backend built with **Django + Django RE
 
 - REST API for nodes, edges, and boards
 - WebSocket support for real-time collaboration
-- User authentication and permissions
+- JWT authentication and permissions
 - Room management for multiple collaborative sessions
-- Scalable and modular project structure
 
 ---
 
 ## 📦 API Endpoints
 
-- `/api/boards/` - Create, read, update, delete boards
-- `/api/nodes/` - CRUD operations for nodes
-- `/api/edges/` - Manage connections between nodes
-- `/api/users/` - User authentication and profile management
-- WebSocket endpoint: `/ws/room/<room_id>/` for real-time updates
+### 🔑 Authentication
+- `POST /board/login` – Log in with username & password → returns JWT tokens  
+- `POST /board/token/refresh/` – Refresh access token  
 
-*(Add more endpoints if your backend has them)*
+### 🗂️ Boards
+- `POST /board/create` – Create a new board  
+
+### 🔌 WebSockets
+- `ws://<your-domain>/ws/board/<room_name>/`  
+  - Join a collaborative board session
 
 ---
 
