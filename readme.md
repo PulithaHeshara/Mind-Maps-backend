@@ -52,9 +52,12 @@ pip install -r requirements.txt
 ```bash
 Create a .env file in the project root:
 
-DJANGO_SECRET_KEY=<YOUR_SECRET_KEY>
-DEBUG=True
-DATABASE_URL=<YOUR_DATABASE_URL>
+# Channels Redis Configuration
+REDIS_HOST=<YOUR_REDIS_HOST>       # e.g., 127.0.0.1
+REDIS_PORT=<YOUR_REDIS_PORT>       # e.g., 6379
+
+# CORS Settings
+CORS_ALLOWED_ORIGINS="<YOUR_FRONTEND_URL>"   # e.g., http://localhost:5173
 
 ```
 5. **Apply migrations**
